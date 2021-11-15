@@ -35,6 +35,7 @@ dependencies:
   location: 3.0.2
   firebase_messaging: 7.0.3
   fluttertoast: 4.0.1
+  flutter_svg: 0.18.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,7 @@ flutter:
   assets:
     - assets/images/
     - assets/cfg/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

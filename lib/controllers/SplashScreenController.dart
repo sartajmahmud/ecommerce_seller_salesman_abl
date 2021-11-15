@@ -21,7 +21,7 @@ class SplashScreenController extends ControllerMVC{
     configureFirebase(firebaseMessaging);
     firebaseMessaging.getToken().then((value) {
       print(value);
-      Navigator.pushNamed(context, '/login');
+      Navigator.pushReplacementNamed(context, '/login');
     });
     // firebaseMessaging.getToken().then((String _deviceToken) {
     //   //user.deviceToken = _deviceToken;

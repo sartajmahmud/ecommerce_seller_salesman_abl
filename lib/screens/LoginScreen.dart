@@ -130,7 +130,7 @@ class _LoginScreenState extends StateMVC<LoginScreen> {
                                 // print('${_con.user.password}');
                                 // _con.login();
                                 // print(currentUser.value.name);
-                                Navigator.pushReplacementNamed(context, '/home');
+                                Navigator.pushReplacementNamed(context, '/mainlayout');
                                 //Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => DashboardScreen()));
                               },
                               padding: const EdgeInsets.all(15.0),
@@ -154,11 +154,9 @@ class _LoginScreenState extends StateMVC<LoginScreen> {
                         Container(
                           alignment: Alignment.center,
                           child: GestureDetector(
-                            onTap: () => Navigator.push(
+                            onTap: () => Navigator.pushNamed(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        ForgetPasswordScreen())),
+                                "/forgetPass"),
                             child: RichText(
                               text: const TextSpan(
                                 children: [
@@ -178,11 +176,10 @@ class _LoginScreenState extends StateMVC<LoginScreen> {
                         Container(
                           alignment: Alignment.center,
                           child: GestureDetector(
-                            onTap: () => Navigator.push(
+                            onTap: () => Navigator.pushNamed(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        SignUpScreen())),
+                              '/signup'
+                                ),
                             child: RichText(
                               text: const TextSpan(
                                 children: [
