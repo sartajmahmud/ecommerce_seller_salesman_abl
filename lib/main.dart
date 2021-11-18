@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:global_configuration/global_configuration.dart';
 import 'package:seller_salesman_ecommerce/screens/ForgetPasswordScreen.dart';
+import 'package:seller_salesman_ecommerce/screens/SalesManScreen/SalesmanMainLayout.dart';
 import 'package:seller_salesman_ecommerce/screens/SellerScreens/HomeScreen.dart';
 import 'package:seller_salesman_ecommerce/screens/SellerScreens/NotificationDetailsScreen.dart';
 import 'package:seller_salesman_ecommerce/screens/SellerScreens/NotificationsScreen.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/orderDetails': (context) => OrderDetailsScreen(),
         '/notificationDetailsScreen': (context) => NotificationDetailsScreen(),
         '/userDetailsScreen': (context) => UserDetailsScreen(),
+        '/salesmanmainlayout': (context) => SalesmanMainLayout(),
       },
       //home: SplashScreen(),
     );

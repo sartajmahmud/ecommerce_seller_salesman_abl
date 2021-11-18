@@ -17,18 +17,6 @@ class _InventoryScreenState extends State<InventoryScreen> {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        // leading: GestureDetector(
-        //   onTap: () {
-        //     Navigator.of(context, rootNavigator: true).pop(context);
-        //   },
-        //   child: Container(
-        //     padding: EdgeInsets.only(left: 25),
-        //     child: Icon(
-        //       Icons.arrow_back_ios,
-        //       color: Colors.black,
-        //     ),
-        //   ),
-        // ),
         title: Container(
           padding: EdgeInsets.symmetric(
             horizontal: 25,
@@ -54,7 +42,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                     children: [
                       Expanded(
                         flex:1,
-                          child: Image.asset('assets/images/user_profile.png')),
+                          child: Image.asset('assets/images/Bizol_G+.jpg')),
                       Expanded(
                         flex:4,
                         child: Padding(
@@ -63,12 +51,12 @@ class _InventoryScreenState extends State<InventoryScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Car Engine Oil',
+                              Text('Bizol G+ 4L',
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold
                               ),),
-                              Text('Price : 19000')
+                              Text('Price : 4800')
                             ],
                           ),
                         ),
@@ -85,7 +73,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                               ),
                             ),
                             padding: EdgeInsets.all(8),
-                            child: Center(child: Text('193 ')),
+                            child: Center(child: Text('193')),
                           ),
                         ),
                       )
@@ -102,7 +90,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                     children: [
                       Expanded(
                           flex:1,
-                          child: Image.asset('assets/images/user_profile.png')),
+                          child: Image.asset('assets/images/Bizol_All_Rounder.jpg')),
                       Expanded(
                         flex:4,
                         child: Padding(
@@ -111,12 +99,12 @@ class _InventoryScreenState extends State<InventoryScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Car Engine Oil',
+                              Text('Bizol All Rounder 4L',
                                 style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold
                                 ),),
-                              Text('Price : 19000')
+                              Text('Price : 4500')
                             ],
                           ),
                         ),
@@ -133,7 +121,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                               ),
                             ),
                             padding: EdgeInsets.all(8),
-                            child: Center(child: Text('193 ')),
+                            child: Center(child: Text('193')),
                           ),
                         ),
                       )

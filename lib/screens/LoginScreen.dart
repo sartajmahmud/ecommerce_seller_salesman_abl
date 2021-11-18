@@ -126,11 +126,16 @@ class _LoginScreenState extends StateMVC<LoginScreen> {
                             child: RaisedButton(
                               elevation: 5.0,
                               onPressed: () async {
+                                if(_con.user.email=='salesman'){
+                                  Navigator.pushReplacementNamed(context, '/salesmanmainlayout');
+                                }else if (_con.user.email=='seller') {
+                                  Navigator.pushReplacementNamed(context, '/mainlayout');
+                                }
                                 // print('${_con.user.email}');
                                 // print('${_con.user.password}');
                                 // _con.login();
                                 // print(currentUser.value.name);
-                                Navigator.pushReplacementNamed(context, '/mainlayout');
+                                //Navigator.pushReplacementNamed(context, '/mainlayout');
                                 //Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => DashboardScreen()));
                               },
                               padding: const EdgeInsets.all(15.0),
