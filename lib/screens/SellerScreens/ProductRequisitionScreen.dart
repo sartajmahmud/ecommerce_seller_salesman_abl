@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:searchable_dropdown/searchable_dropdown.dart';
 import 'package:seller_salesman_ecommerce/widgets/app_button.dart';
 import 'package:seller_salesman_ecommerce/widgets/app_text.dart';
 
@@ -12,7 +13,7 @@ class ProductRequisitionScreen extends StatefulWidget {
 
 class _ProductRequisitionScreenState extends State<ProductRequisitionScreen> {
   int itemCount = 1;
-  var _currentSelectedValue;
+  var _categoryname;
   var _currencies = [
     "BIZOL Moto 5W-40",
     "BIZOL Moto 10W-40",
@@ -145,41 +146,35 @@ class _ProductRequisitionScreenState extends State<ProductRequisitionScreen> {
                             flex: 7,
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0,5,10,5),
-                              child: FormField<String>(
-                                builder: (FormFieldState<String> state) {
-                                  return InputDecorator(
-                                    decoration: InputDecoration(
-                                      //labelStyle: textStyle,
-                                        errorStyle: TextStyle(color: Colors.redAccent, fontSize: 16.0),
-                                        hintText: 'Please select expense',
-                                      border: new OutlineInputBorder(
-                                          borderSide: new BorderSide(color: Colors.teal)
-                                      ),
-                                      enabledBorder: const OutlineInputBorder(
-                                        borderSide: const BorderSide(color: Colors.grey, width: 1.0),
-                                      ),
-                                    ),
-                                    isEmpty: _currentSelectedValue == '',
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton<String>(
-                                        value: _currentSelectedValue,
-                                        isDense: true,
-                                        onChanged: (String newValue) {
+                              child: SearchableDropdown.single(
+                                items: _currencies.map((cat) {
+                                  return DropdownMenuItem(
+                                    child: InkWell(
+                                      onTap: () {
+                                        if (cat != _categoryname) {
                                           setState(() {
-                                            _currentSelectedValue = newValue;
-                                            state.didChange(newValue);
+                                            _categoryname = cat;
+                                            Navigator.pop(context);
                                           });
-                                        },
-                                        items: _currencies.map((String value) {
-                                          return DropdownMenuItem<String>(
-                                            value: value,
-                                            child: Text(value),
-                                          );
-                                        }).toList(),
+                                        }
+                                      },
+                                      child: Container(
+                                        width: MediaQuery.of(context).size.width - 65,
+                                        child: new Text(
+                                          cat,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
                                       ),
                                     ),
+                                    value: cat,
                                   );
+                                }).toList(),
+                                value: _categoryname,
+                                hint: "Select Product",
+                                searchHint: "Select Product",
+                                onChanged: (newValue) {
                                 },
+                                isExpanded: true,
                               ),
                             )),
                         Expanded(

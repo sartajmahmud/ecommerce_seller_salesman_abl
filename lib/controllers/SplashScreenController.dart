@@ -23,12 +23,6 @@ class SplashScreenController extends ControllerMVC{
       print(value);
       Navigator.pushReplacementNamed(context, '/login');
     });
-    // firebaseMessaging.getToken().then((String _deviceToken) {
-    //   //user.deviceToken = _deviceToken;
-    //   print("DT: "+_deviceToken);
-    // }).catchError((e) {
-    //   print('Notification not configured');
-    // });
   }
 
   void configureFirebase(FirebaseMessaging _firebaseMessaging) {
